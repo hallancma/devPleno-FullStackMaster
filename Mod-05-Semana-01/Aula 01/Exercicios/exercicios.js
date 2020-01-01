@@ -57,10 +57,13 @@ console.log(numeroImpares);
 calculadora(10, '+', 20)
 crie o corpo da função de forma que ela realize as 4 operações aritméticas */
 const calculadora = (n1, op, n2) => {
-  if (op === `+`) return n1 + n2;
-  if (op === `-`) return n1 + n2;
-  if (op === `*`) return n1 + n2;
-  if (op === `/`) return n1 + n2;
+  const ops = {
+    '+': (n1, n2) => n1 + n2,
+    '-': (n1, n2) => n1 - n2,
+    '*': (n1, n2) => n1 * n2,
+    '/': (n1, n2) => n1 / n2
+  };
+  return ops[op](n1, n2);
 };
 
 console.log(calculadora(10, '+', 20));
@@ -84,3 +87,27 @@ console.log(calculadoraFn(10, soma, 20));
 console.log(calculadoraFn(10, subtracao, 5));
 console.log(calculadoraFn(2, multiplicacao, 3));
 console.log(calculadoraFn(20, divisao, 5));
+
+var pessoas = [
+  { nome: 'Alice', idade: 21 },
+  { nome: 'Max', idade: 20 },
+  { nome: 'Jane', idade: 20 }
+];
+
+function agruparPor(objetoArray, propriedade) {
+  return objetoArray.reduce(function(acc, obj) {
+    var key = obj[propriedade];
+    if (!acc[key]) {
+      acc[key] = [];
+    }
+    acc[key].push(obj);
+    return acc;
+  }, {});
+}
+
+var grupodePessoas = agruparPor(pessoas, 'idade');
+console.log(grupodePessoas);
+
+const teste = [1, 2, 3];
+console.log(teste.push(6));
+console.log(teste);
