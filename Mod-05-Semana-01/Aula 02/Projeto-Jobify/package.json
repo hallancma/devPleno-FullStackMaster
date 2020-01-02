@@ -1,0 +1,12 @@
+{
+  "name": "jobify",
+  "version": "1.0.0",
+  "description": "Jobify is a sample job board for sites",
+  "main": "index.js",
+  "author": "Hallan Christian",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1"
+  }
+}
