@@ -1,0 +1,12 @@
+{
+  "name": "curriculo",
+  "version": "1.0.0",
+  "description": "Curriculo Hallan Chrisitan",
+  "main": "index.js",
+  "author": "Hallan Christian",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1"
+  }
+}
