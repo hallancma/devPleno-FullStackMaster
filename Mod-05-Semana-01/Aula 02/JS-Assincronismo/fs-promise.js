@@ -20,7 +20,31 @@ const writeFile = (path, data) =>
       }
     });
   });
+const readDir = caminho =>
+  new Promise((resolve, reject) => {
+    fs.readdir(caminho, (err, arquivos) => {
+      if (err) {
+        reject('erro ao executar', err);
+      } else {
+        resolve(arquivos);
+      }
+    });
+  });
+
+const readDiretorios = caminho =>
+  new Promise((resolve, reject) => {
+    fs.readdir(caminho, (err, arquivos) => {
+      if (err) {
+        reject('erro ao executar', err);
+      } else {
+        resolve(arquivos);
+      }
+    });
+  });
+
 module.exports = {
   readFile,
-  writeFile
+  writeFile,
+  readDir,
+  readDiretorios
 };
