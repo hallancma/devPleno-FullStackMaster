@@ -1,17 +1,12 @@
   <%- include('header') %>
   <article class="container">
-  <h2>Fullstack Developer (Remote)</h2>
+  <h2><%- vaga.titulo %></h2>
   <div>
-    <h3>Enginneering team</h3>
+    <!-- <h3>Descrição:</h3>-->
     <ul>
-      <li><a href="vaga">Fullstack Developer (Remote)</a></li>
+      <li><%- vaga.descricao %></li>
     </ul>
-  </div>
-    <div>
-    <h3>Marketing team</h3>
-    <ul>
-      <li>Digital Marketing (San Francisco)</li>
-    </ul>
+   <a href="/" class="botaoVoltar"><- Voltar</a> 
   </div>
  </article>
 <%- include('footer') %>
