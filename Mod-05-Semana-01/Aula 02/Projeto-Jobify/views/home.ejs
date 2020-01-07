@@ -1,17 +1,17 @@
   <%- include('header') %>
   <article class="container">
   <h2>Open roles:</h2>
+  <% categorias.forEach(categoria=>{%>
   <div>
-    <h3>Enginneering team</h3>
+    <h3><%- categoria.categoria %></h3>
     <ul>
-      <li><a href="vaga">Fullstack Developer (Remote)</a></li>
+    <% categoria.vagas.forEach(vaga =>{%>
+     <li><a href="vaga/<%- vaga.id %>"><%- vaga.titulo %></a></li>
+    <%}) %>
+     
     </ul>
   </div>
-    <div>
-    <h3>Marketing team</h3>
-    <ul>
-      <li>Digital Marketing (San Francisco)</li>
-    </ul>
-  </div>
+  <%}) %>
+
   </article>
 <%- include('footer') %>
