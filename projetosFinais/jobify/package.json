@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Jobify is a sample job board for sites",
   "main": "index.js",
-  "author": "Hallan Christian M Alencar",
+  "author": "Hallan Christian Meirelles Alencar",
   "license": "MIT",
   "engines": {
     "node": "12.x"
