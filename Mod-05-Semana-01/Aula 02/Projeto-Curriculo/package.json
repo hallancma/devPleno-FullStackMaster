@@ -4,6 +4,12 @@
   "description": "Curriculo Hallan Chrisitan",
   "main": "index.js",
   "author": "Hallan Christian",
+  "engines": {
+    "node": "12.x"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
   "license": "MIT",
   "dependencies": {
     "ejs": "^3.0.1",
