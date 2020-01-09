@@ -9,8 +9,8 @@
     <% categorias.forEach(categoria =>{%>
      <li>
       <%- categoria.categoria %> | 
-      <a href="/admin/categoria/delete/<%- categoria.id %>">Excluir</a>
-      <a href="/admin/categoria/editar/<%- categoria.id %>">Editar</a>
+      <a href="/admin/categoria/delete/<%- categoria.id %>"><i class="fa fa-trash"></i> Excluir</a>
+      <a href="/admin/categoria/editar/<%- categoria.id %>"><i class="fa fa-edit"></i> Editar</a>
       </li>
     <%}) %>
     </ul>
