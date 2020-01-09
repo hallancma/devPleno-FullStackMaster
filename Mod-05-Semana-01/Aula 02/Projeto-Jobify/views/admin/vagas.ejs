@@ -2,15 +2,15 @@
   <article class="container">
   <h2>
   Admin Vagas:
-    <a href="/admin/nova"><span class="novo">Cadastrar Vaga</span></a>
+    <a href="/admin/nova"><span class="novo"><i class="fa fa-plus-square"></i> Cadastrar Vaga</span></a>
   </h2>
   <div>
     <ul>
     <% vagas.forEach(vaga =>{%>
      <li>
       <%- vaga.titulo %> | 
-      <a href="/admin/vagas/delete/<%- vaga.id %>">Excluir</a>
-      <a href="/admin/vagas/editar/<%- vaga.id %>">Editar</a>
+      <a href="/admin/vagas/delete/<%- vaga.id %>" class="excluir"><i class="fa fa-trash"></i> Excluir</a>
+      <a href="/admin/vagas/editar/<%- vaga.id %>" class="editar"><i class="fa fa-edit"></i> Editar</a>
       </li>
     <%}) %>
     </ul>
