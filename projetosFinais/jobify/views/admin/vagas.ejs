@@ -1,0 +1,20 @@
+  <%- include('../header') %>
+  <article class="container">
+  <h2>
+  Admin Vagas:
+    <a href="/admin/nova"><span class="novo">Cadastrar Vaga</span></a>
+  </h2>
+  <div>
+    <ul>
+    <% vagas.forEach(vaga =>{%>
+     <li>
+      <%- vaga.titulo %> | 
+      <a href="/admin/vagas/delete/<%- vaga.id %>">Excluir</a>
+      <a href="/admin/vagas/editar/<%- vaga.id %>">Editar</a>
+      </li>
+    <%}) %>
+    </ul>
+      <a href="/admin" class="botaoVoltar"><- Voltar</a> 
+  </div>
+  </article>
+<%- include('../footer') %>
