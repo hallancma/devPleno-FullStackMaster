@@ -99,12 +99,18 @@ a:hover {
 
 .novo {
   float: right;
-  font-size: 0.5em;
+  font-size: 14px;
   padding: 6px;
   background-color: #6b1473;
   color: #fff;
   border: 1px solid #fff;
   border-radius: 5px;
+}
+
+.novo:hover {
+  background-color: #fff;
+  color: #6b1473;
+  border: 1px solid #6b1473;
 }
 
 .novaVaga:hover {
@@ -138,4 +144,54 @@ button {
 }
 button:hover {
   background-color: rgb(45, 233, 145);
+}
+
+.botaoVoltar {
+  background-color: #6b1473;
+  color: #fff;
+  padding: 2px;
+  border: solid 2px #6b1473;
+  border-radius: 3px;
+  font-size: 14px;
+}
+.botaoVoltar,
+.areaAdmin:hover {
+  background-color: #fff;
+  color: #6b1473;
+}
+
+.areaAdmin {
+  float: right;
+  font-size: 14px;
+  color: #fff;
+  background-color: #6b1473;
+  border: solid 2px #6b1473;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.excluir {
+  background-color: crimson;
+  font-size: 0.7em;
+  border: solid 2px crimson;
+  border-radius: 3px;
+  color: #fff;
+  padding: 0 2px 0 2px;
+}
+.excluir:hover {
+  background-color: #fff;
+  color: crimson;
+}
+
+.editar {
+  background-color: #399be9;
+  font-size: 0.7em;
+  border: solid 2px #399be9;
+  border-radius: 3px;
+  color: #fff;
+  padding: 0 2px 0 2px;
+}
+.editar:hover {
+  background-color: #fff;
+  color: #399be9;
 }
