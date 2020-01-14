@@ -2,15 +2,20 @@
   <article class="container">
   <h2>
   Admin Categorias:
-    <a href="/admin/novaCategoria"><span class="novo">Cadastrar Categoria</span></a>
+    <a href="/admin/novaCategoria"><span class="novo"><i class="fa fa-plus-square"></i> Cadastrar Categoria</span></a>
   </h2>
   <div>
     <ul>
     <% categorias.forEach(categoria =>{%>
      <li>
       <%- categoria.categoria %> | 
+<<<<<<< HEAD
+      <a href="/admin/categoria/delete/<%- categoria.id %>" class="excluir"><i class="fa fa-trash"></i> Excluir</a>
+      <a href="/admin/categoria/editar/<%- categoria.id %>" class="editar"><i class="fa fa-edit"></i> Editar</a>
+=======
       <a href="/admin/categoria/delete/<%- categoria.id %>"><i class="fa fa-trash"></i> Excluir</a>
       <a href="/admin/categoria/editar/<%- categoria.id %>"><i class="fa fa-edit"></i> Editar</a>
+>>>>>>> master
       </li>
     <%}) %>
     </ul>
