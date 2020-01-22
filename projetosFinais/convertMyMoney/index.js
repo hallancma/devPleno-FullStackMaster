@@ -14,7 +14,6 @@ app.get('/', (req, res) => {
 
 app.get('/cotacao', (req, res) => {
   const { cotacao, quantidade } = req.query;
-  console.log(parseFloat(cotacao));
   if (convert.isNumber(cotacao) && convert.isNumber(quantidade)) {
     const conversao = convert.convert(cotacao, quantidade);
     res.render('cotacao', {
