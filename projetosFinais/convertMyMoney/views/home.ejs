@@ -1,0 +1,28 @@
+<%- include('header') %>
+<div class="container">
+    <div class="logo">
+    <h1>
+    <a href="/">
+      <img src="./imgs/ConvertMyMoneyWhite.png" alt="">
+    </a>
+    </h1>
+    </div>
+    <div class="login-item">
+      <form action="/cotacao" method="get" class="form form-login">
+        <div class="form-field">
+          <label class="dollar" for="cotacao"><span class="hidden">Cotação do dolar</span></label>
+          <input id="cotacao" name="cotacao" type="text" class="form-input" placeholder="Cotação do dolar" required>
+        </div>
+
+        <div class="form-field">
+          <label class="coins" for="quantidade"><span class="hidden">Quantidade</span></label>
+          <input id="quantidade" name="quantidade" type="number" class="form-input" placeholder="Quantidade" required>
+        </div>
+
+        <div class="form-field">
+          <input type="submit" value="Converter">
+        </div>
+      </form>
+    </div>
+</div>
+<%- include('footer') %>
