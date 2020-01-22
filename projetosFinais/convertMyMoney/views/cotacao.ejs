@@ -1,0 +1,22 @@
+<%- include('header') %>
+<div class="container">
+    <div class="logo">
+    <h1>
+    <a href="/">
+      <img src="./imgs/ConvertMyMoneyWhite.png" alt="">
+    </a>
+    </h1>
+    </div>
+  <div class="result">
+  <% if(error){ %>
+    <%= error %>
+  <% } else { %>
+    R$ <%= quantidade %> na cotação de
+    R$ <%= cotacao %> da um total de
+    $ <%= conversao %> reais
+  <% } %>
+  </div>
+
+   
+</div>
+<%- include('footer') %>
