@@ -1,17 +1,17 @@
-# Projeto - Meu Currículo
+# Projeto - ConvertMyMoney
 
 > Projeto criado com os aprendizados do curso fullstack master - Dev Pleno
 
 ## :rocket: Requisitos do projeto:white_check_mark:
 
-> Desenvolver seu próprio currículo utilizando node e ejs
+> Desenvolver um conversor de valores (R$(reais) para $(doláres))
 
 ### Executando o projeto:
 
 > Clone o projeto e no diretório raiz digite em seu terminal:
 
 ```
-node inde.js
+yarn dev
 
 ```
 

@@ -19,4 +19,4 @@ node inde.js
 
 ```
 
-#### [Clique aqui oara acessar o projeto online](https://projeto-jobify.herokuapp.com):
+#### [Clique aqui para acessar o projeto online](https://projeto-jobify.herokuapp.com):
