@@ -15,4 +15,4 @@ yarn dev
 
 ```
 
-#### [Clique aqui para acessar o projeto online](https://app-meu-curriculo.herokuapp.com):
+#### [Clique aqui para acessar o projeto online](https://app-convert-my-money.herokuapp.com/):
