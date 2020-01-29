@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1580282802423" clover="3.2.0">
+  <project timestamp="1580282802423" name="All files">
+    <metrics statements="24" coveredstatements="23" conditionals="2" coveredconditionals="2" methods="9" coveredmethods="8" elements="35" coveredelements="33" complexity="0" loc="24" ncloc="24" packages="1" files="2" classes="2"/>
+    <file name="api.bcb.js" path="/Applications/XAMPP/xamppfiles/htdocs/DevPleno/projetosFinais/convertMyMoney/lib/api.bcb.js">
+      <metrics statements="17" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="5"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="3" count="2" type="stmt"/>
+      <line num="4" count="2" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="13" count="1" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="18" count="0" type="stmt"/>
+      <line num="24" count="1" type="stmt"/>
+      <line num="25" count="1" type="stmt"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="27" count="1" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="33" count="1" type="stmt"/>
+    </file>
+    <file name="convert.js" path="/Applications/XAMPP/xamppfiles/htdocs/DevPleno/projetosFinais/convertMyMoney/lib/convert.js">
+      <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="2" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="6" count="2" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="10" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="13" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

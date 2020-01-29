@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon index.js",
-    "test": "jest"
+    "test": "jest",
+    "start": "node index.js"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -15,5 +16,8 @@
   "devDependencies": {
     "jest": "^24.9.0",
     "nodemon": "^2.0.2"
+  },
+  "jest": {
+    "collectCoverage": true
   }
 }
