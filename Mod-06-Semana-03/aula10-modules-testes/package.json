@@ -1,0 +1,15 @@
+{
+  "name": "aula10-modules-testes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0"
+  },
+  "jest": {
+    "collectCoverage": true
+  }
+}
