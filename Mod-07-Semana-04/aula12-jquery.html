@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fullstack Master</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <section id="principal">
+      <h1>Fullstack Master</h1>
+      <h2 class="titulo outroTitulo">Sobre</h2>
+      <a href="aula02-pagina.html">Entre para ver</a>
+      <p class="titulo">Olá Fullstack master</p>
+    </section>
+    <div class="box">
+      <span>Texto</span>
+
+    </div>
+    <button id="btn" type="button">Clique aqui</button>
+
+    <script>
+      $(function () {
+        $('#btn').click(function () {
+          $('body').append('<p>Ola Mundo!</p>');
+          $('.box').slideToggle()
+        })
+
+      });
+
+      /*document.addEventListener('DOMContentLoaded', () => {
+        console.log('Content loaded');
+        const carro = {
+          marca: 'Fiat',
+          cor: 'Vermelho'
+        }
+        console.log('Foi', carro)
+        const principal = document.querySelector('#principal');
+        const botao = document.querySelector('#btn');
+        botao.addEventListener('click', () => {
+          const p = document.createElement('p');
+          p.innerHTML = 'Olá Mundo'
+          document
+            .body
+            .appendChild(p);
+
+        });
+
+      })*/
+    </script>
+
+  </body>
+</html>
