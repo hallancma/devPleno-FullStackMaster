@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fullstack Master</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <section id="principal">
+      <h1>Fullstack Master</h1>
+      <h2 class="titulo outroTitulo">Sobre</h2>
+      <a href="aula02-pagina.html">Entre para ver</a>
+      <p class="titulo">Olá Fullstack master</p>
+    </section>
+    <div class="box">
+      <span>Texto</span>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        console.log('Content loaded');
+        const carro = {
+          marca: 'Fiat',
+          cor: 'Vermelho'
+        }
+        console.log('Foi', carro)
+        const principal = document.querySelector('#principal');
+        console.log(principal);
+      })
+    </script>
+
+  </body>
+</html>
