@@ -1,0 +1,22 @@
+<%- include('../partials/header.ejs') %>
+<div class="page-header" >
+  <h1> <small >Cadastrar nova pessoa:</small></h1>
+</div>
+<p><a href="/pessoas/" type="button" class="btn btn-primary"> <span class="glyphicon glyphicon-chevron-left"></span> Voltar a lista de pessoa</a>  </p>
+<form method="post">
+  <div class="form-group">
+    <label for="nome">Nome</label>
+    <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome">
+  </div>
+  <div class="form-group">
+    <label for="nascimento">Nascimento</label>
+    <input type="text" class="form-control js-date" name="nascimento" id="nascimento" placeholder="Nascimento" maxlength="10">
+  </div>
+  <div class="form-group">
+    <label for="cargo">Cargo</label>
+    <input type="text" class="form-control" name="cargo" id="cargo" placeholder="Cargo" maxlenght="10">
+  </div>
+  <button type="submit" class="btn btn-success">Salvar</button>
+</form>
+<script src="/dist/js/scripts.js"></script>
+<%- include('../partials/footer.ejs') %>
