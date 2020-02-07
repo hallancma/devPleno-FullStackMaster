@@ -38,10 +38,14 @@ const deleteOne = (connection, id) => {
 
 const createPessoa = (connection, data) => {
   return new Promise((resolve, reject) => {
+    let dataSplit = data.nascimento;
+    let retorno = dataSplit.split('/');
+    dataNascimentoLimpa = retorno[2] + '-' + retorno[1] + '-' + retorno[0];
+    // console.log(dataNascimento);
     connection('pessoas')
       .insert({
         nome: data.nome,
-        nascimento: `${moment(data.nascimento).format()}`,
+        nascimento: `${moment(dataNascimentoLimpa).format('YYYY-MM-DD')}`,
         cargo: `${data.cargo}`
       })
       .then(() => {
@@ -56,11 +60,14 @@ const createPessoa = (connection, data) => {
 
 const updatePessoa = (connection, id, data) => {
   return new Promise((resolve, reject) => {
+    let dataSplit = data.nascimento;
+    let retorno = dataSplit.split('/');
+    dataNascimentoLimpa = retorno[2] + '-' + retorno[1] + '-' + retorno[0];
     connection('pessoas')
       .where({ id: id })
       .update({
         nome: data.nome,
-        nascimento: `${moment(data.nascimento).format('YYYY-MM-DD')}`,
+        nascimento: `${moment(dataNascimentoLimpa).format('YYYY-MM-DD')}`,
         cargo: `${data.cargo}`
       })
       .then(() => {
