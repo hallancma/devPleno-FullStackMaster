@@ -30,7 +30,6 @@ app.use(
   })
 );
 const User = require('./models/user');
-const Noticia = require('./models/noticias');
 const noticias = require('./routes/noticias');
 const restrito = require('./routes/restrito');
 const admin = require('./routes/admin');
@@ -48,13 +47,13 @@ app.use(express.static('public'));
 app.use('/', auth);
 app.use('/', pages);
 
-app.use((req, res, next) => {
-  if ('user' in req.session) {
-    res.locals.user = req.session.user;
-    res.locals.role = req.session.role;
-  }
-  next();
-});
+// app.use((req, res, next) => {
+//   if ('user' in req.session) {
+//     res.locals.user = req.session.user;
+//     res.locals.role = req.session.role;
+//   }
+//   next();
+// });
 
 app.use('/restrito', restrito);
 const createInitialUser = async () => {

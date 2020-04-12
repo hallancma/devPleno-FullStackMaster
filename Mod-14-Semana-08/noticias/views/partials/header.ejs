@@ -34,7 +34,7 @@
             <a class="nav-link" href="/noticias">Notícias</a>
           </li>
 
-          <% if(locals.user != '' && 'user' in locals && 'user'){ %>
+          <% if(locals.user){ %>
           <% if(locals.role === 'restrito'){ %>
           <li class="nav-item">
             <a class="nav-link" href="/restrito/noticias">Notícias restritas</a>
@@ -46,10 +46,10 @@
           </li>
           <% } %>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= locals.user.username %></a>
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= locals.user.username || locals.user.name  %></a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
-            <% if(locals.user.roles.length > 1){ %>
-             <% locals.user.roles.forEach(role =>{ %>
+            <% if(Object.values(locals.user.roles).length > 1){ %>
+             <% Object.values(locals.user.roles).forEach(role =>{ %>
                 <a class="dropdown-item" href="/change-role/<%= role %>"><%= role %></a>
              <% }) %>
                <% } %>
@@ -60,6 +60,12 @@
           <% } else {%>
           <li class="nav-item dropdown">
              <a class="nav-link" href="/login">Entrar</a>
+          </li>
+            <li class="nav-item ">
+             <a class="nav-link" href="/facebook">Entrar com Facebok</a>
+          </li>
+          <li class="nav-item ">
+             <a class="nav-link" href="/google">Entrar com Google</a>
           </li>
            <% } %>
         </ul>
