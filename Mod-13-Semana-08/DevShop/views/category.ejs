@@ -1,0 +1,119 @@
+  <%- include('header') %>
+<!-- ========================= SECTION PAGETOP ========================= -->
+<section class="section-pagetop bg-primary">
+<div class="container clearfix">
+	<%
+		let categoria;
+		if(category[0]){
+			categoria = category[0].category;
+		}else{
+			categoria = 'Todos Produtos';
+		}
+	%>
+	<h2 class="title-page"><%- categoria %></h2>
+
+	<nav class="float-left">
+	<ol class="breadcrumb text-white">
+	    <li class="breadcrumb-item"><a href="/">Home</a></li>
+	    <li class="breadcrumb-item " aria-current="page"><%- categoria %></li>
+	</ol>  
+	</nav>
+</div> <!-- container //  -->
+</section>
+<!-- ========================= SECTION INTRO END// ========================= -->
+
+<!-- ========================= SECTION CONTENT ========================= -->
+<section class="section-content bg padding-y">
+<div class="container">
+
+<div class="row">
+
+	<main class="col-sm-12">
+
+
+
+		<%  products.forEach((product,index)=>{  %>
+		<article class="card card-product">
+	<div class="card-body">
+	<div class="row">
+		<aside class="col-sm-3">
+			<div class="img-wrap"><img src="/images/items/<%- product[index].photoDefault %>"></div>
+		</aside> <!-- col.// -->
+		<article class="col-sm-6">
+				<h4 class="title"> <%- product[index].name %>  </h4>
+				<div class="rating-wrap  mb-2">
+					<ul class="rating-stars">
+						<li style="width:80%" class="stars-active"> 
+							<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
+							<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
+							<i class="fa fa-star"></i> 
+						</li>
+						<li>
+							<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
+							<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
+							<i class="fa fa-star"></i> 
+						</li>
+					</ul>
+					<div class="label-rating">132 reviews</div>
+					<div class="label-rating">154 orders </div>
+				</div> <!-- rating-wrap.// -->
+				<p> <%- product[index].description %> </p>
+				<dl class="dlist-align">
+				  <dt>Color</dt>
+				  <dd><%- product[index].color %></dd>
+				</dl>  <!-- item-property-hor .// -->
+				<dl class="dlist-align">
+				  <dt>Material</dt>
+				  <dd>----</dd>
+				</dl>  <!-- item-property-hor .// -->
+				<dl class="dlist-align">
+				  <dt>Entraga</dt>
+				  <dd>Para todo Território Nacional</dd>
+				</dl>  <!-- item-property-hor .// -->
+			
+		</article> <!-- col.// -->
+		<aside class="col-sm-3 border-left">
+			<div class="action-wrap">
+				<div class="price-wrap h4">
+					<span class="price"> R$ <%- product[index].price %></span>	
+					<del class="price-old"> R$ <%- product[index].price + 400 %></del>
+				</div> <!-- info-price-detail // -->
+				<p class="text-success">Frete Grátis</p>
+				<br>
+				<p>
+					<a href="#" class="btn btn-primary"> Comprar </a>
+					<a href="/produto/<%- products[index].slug %>/<%- product[index].id %>" class="btn btn-secondary"> Detalhes  </a>
+				</p>
+				<a href="#"><i class="fa fa-heart"></i> Adiconar os favoritos</a>
+			</div> <!-- action-wrap.// -->
+		</aside> <!-- col.// -->
+	</div> <!-- row.// -->
+	</div> <!-- card-body .// -->
+</article> <!-- card product .// -->
+
+
+		<% }) %>
+
+
+	</main> <!-- col.// -->
+</div>
+
+</div> <!-- container .//  -->
+</section>
+<!-- ========================= SECTION CONTENT END// ========================= -->
+
+<!-- ========================= SECTION  ========================= -->
+<section class="section-name bg-white padding-y">
+<div class="container">
+<h4>DevShop - Produtos de Qualidade e Garantia</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div><!-- container // -->
+</section>
+<!-- ========================= SECTION  END// ========================= -->
+
+  <%- include('footer') %>
