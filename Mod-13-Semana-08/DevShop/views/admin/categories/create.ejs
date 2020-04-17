@@ -1,0 +1,75 @@
+  <%- include('../../header') %>
+<!-- ========================= SECTION PAGETOP ========================= -->
+<section class="section-pagetop bg-primary">
+<div class="container clearfix">
+	<h2 class="title-page">Admin</h2>
+
+	<nav class="float-left">
+	<ol class="breadcrumb text-white">
+	    <li class="breadcrumb-item"><a href="/">Home</a></li>
+	</ol>  
+	</nav>
+</div> <!-- container //  -->
+</section>
+<!-- ========================= SECTION INTRO END// ========================= -->
+
+<!-- ========================= SECTION CONTENT ========================= -->
+<section class="section-content bg padding-y">
+<div class="container">
+
+
+<div class="row ">
+<article class="col-sm-12 ">
+     <!--     <aside class="col-sm-3">
+          <p>
+					  <a href="/admin/categorias/nova" class="btn btn-primary"> Nova Categoria </a>
+				  </p>
+        </aside>-->
+   </article>  
+</div>
+<div class="row">
+
+	<main class="col-sm-12">
+
+
+    <div class="card">
+    <header class="card-header">
+      <h4 class="card-title mt-2">Criar nova categoria</h4>
+    </header>
+    <article class="card-body">
+      <form method="post">
+
+          <div class="form-group">
+            <label>Categoria</label>
+              <input name="category" type="text" class="form-control <% if(errors.indexOf('category')>=0){ %> is-invalid <% } %>" placeholder="" valeu="<%= form.category %>">
+         
+              <div class="invalid-feedback">
+                Por favor preencha a categoria (min.5 caracteres)!
+              </div>
+              
+          </div> 
+
+        <div class="form-group">
+          <label>Descrição</label>
+          <textarea name="description" class="form-control <% if(errors.indexOf('description')>=0){ %> is-invalid <% } %>" placeholder="" valeu="<%= form.description %>"></textarea>
+                        <div class="invalid-feedback">
+                Por favor preencha a Descrição (min.5 caracteres)!
+              </div>
+        </div> 
+          <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-block"> Salvar  </button>
+          </div>                                           
+      </form>
+    </article> <!-- card-body end .// -->
+
+
+
+
+	</main> <!-- col.// -->
+</div>
+
+</div> <!-- container .//  -->
+</section>
+
+
+  <%- include('../../footer') %>

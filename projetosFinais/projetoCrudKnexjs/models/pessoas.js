@@ -1,10 +1,25 @@
 const moment = require('moment');
-const findAll = async connection => {
+const findAll = async (connection, params) => {
+  const offset = params.currentPage * params.pageSize;
+  const pageSize = params.pageSize;
+  const totalPessoaQuery = await connection('pessoas').count('id as total');
+  const totalPessoas = totalPessoaQuery[0].total;
+  const totalPages = parseInt(totalPessoas / pageSize);
+
   const pessoas = await connection('pessoas')
     .select('*')
-    .orderBy('id', 'desc');
+    .orderBy('id', 'desc')
+    .limit(pageSize)
+    .offset(offset);
   try {
-    return pessoas;
+    return {
+      data: pessoas,
+      pagination: {
+        pages: totalPages,
+        pageSize,
+        currentPage: parseInt(params.currentPage)
+      }
+    };
   } catch (error) {
     return error;
   }

@@ -6,7 +6,8 @@
             <h2>Séries</h2>
             <p class="lead">Todas as séries cadastradas <a href="/series/nova" class="btn btn-info">Nova Série</a></p>
             <table class="table table-hover">
-              <% series.forEach(serie => { %>
+            <% JSON.stringify(results) %>
+              <% results.data.forEach(serie => { %>
                   <tr>
                     <td>
                     <a href="/series/info/<%= serie._id %>" ><%= serie.name %></a>
@@ -23,6 +24,23 @@
               <% }) %>
               
             </table>
+
+              <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                <% if(results.pagination.currentPage > 0){ %>
+                  <li class="page-item"><a class="page-link" href="/series?page=<%= results.pagination.currentPage - 1  %>&pageSize=<%= results.pagination.pageSize %>">Anterior</a></li>
+
+                <% } %>  
+                  <% for(let i = 0; i < results.pagination.pages; i ++){ %>
+                  <li class="page-item <% if(i == results.pagination.currentPage){ %> active <% } %>"><a class="page-link" href="/series?page=<%= i %>&pageSize=<%= results.pagination.pageSize %>"><%= i + 1 %></a></li>
+                  <% } %>
+                   <% if(results.pagination.currentPage < results.pagination.pages -1){ %>
+                  <li class="page-item"><a class="page-link" href="/series?page=<%= results.pagination.currentPage + 1%>&pageSize=<%= results.pagination.pageSize %>">Próximo</a></li>
+
+                  <% } %>  
+                </ul>
+              </nav>
+
           </div>
         </div>
       </div>
