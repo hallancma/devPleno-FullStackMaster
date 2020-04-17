@@ -31,7 +31,7 @@
 	<main class="col-sm-12">
 
 
-
+	
 		<%  products.forEach((product,index)=>{  %>
 		<article class="card card-product">
 	<div class="card-body">
@@ -93,6 +93,27 @@
 
 
 		<% }) %>
+	
+		
+<nav aria-label="Mais produtos">
+  <ul class="pagination justify-content-center">
+		<% if(products[0].pagination.currentPage > 0) { %>
+    	<li class="page-item"><a class="page-link" href="?pageSize=<%- products[0].pagination.pageSize %>
+			&currentPage=<%- products[0].pagination.currentPage  -1 %>">Anterior</a></li>
+    <% } %>
+		
+		<% for(let i = 0; i < products[0].pagination.totalPages ; i++) { %>
+		
+			<li class="page-item"><a class="page-link" 
+			href="?pageSize=<%- products[0].pagination.pageSize %>
+			&currentPage=<%- i %>"><%= i + 1 %></a></li>
+		<% } %>
+		<% if(products[0].pagination.totalPages - 1 > products[0].pagination.currentPage) { %>
+    	<li class="page-item"><a class="page-link" href="?pageSize=<%- products[0].pagination.pageSize %>
+			&currentPage=<%- products[0].pagination.currentPage  + 1 %>">Próxima</a></li>
+		<% } %>
+  </ul>
+</nav>
 
 
 	</main> <!-- col.// -->

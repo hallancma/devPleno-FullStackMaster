@@ -2,7 +2,7 @@ const init = db => {
   const express = require('express');
   const app = express();
 
-  const category = require('./models/category');
+  const category = require('./models/category')(db);
   const routes = require('./routes');
   const bodyParser = require('body-parser');
   const session = require('express-session');
@@ -23,7 +23,7 @@ const init = db => {
 
   //middleware
   app.use(async (req, res, next) => {
-    const categories = await category.getCategories(db)();
+    const categories = await category.getCategories();
     const { user } = req.session;
     // const subCategorias = await category.getSubCategories(db)(2);
     const subCategorias = async menuID =>

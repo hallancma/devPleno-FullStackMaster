@@ -1,8 +1,12 @@
 const pessoas = require('../models/pessoas');
 const index = async (connection, req, res) => {
-  const results = await pessoas.findAll(connection);
+  const params = {
+    pageSize: req.query.pageSize || 10,
+    currentPage: req.query.page || 0
+  };
+  const results = await pessoas.findAll(connection, params);
   //res.send(results);
-  res.render('pessoas/index', { pessoas: results });
+  res.render('pessoas/index', { results });
 };
 
 const deleteOne = async (connection, req, res) => {
