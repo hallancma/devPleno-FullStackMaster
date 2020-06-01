@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+  src="https://code.jquery.com/jquery-3.5.0.min.js"
+  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+  crossorigin="anonymous"></script>
+  </head>
+  <script>
+    $(function () {
+      $.get('http://server1:3000/series?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlYTBkNWRiYTdiZWFmMzY4YWU4YTdjOCIsInVzZXJuYW1lIjoiaGFsbGFuIiwicm9sZXMiOlsicmVzdHJpdG8iLCJhZG1pbiJdLCJpYXQiOjE1ODc2MDM1MDJ9.-mObVQxgX-9qak0w8kYxHIXU9HGAsIuXwLsOObWCD-c', (data) => {
+        console.log(data);
+      })
+    })
+  </script>
+  <body></body>
+</html>
